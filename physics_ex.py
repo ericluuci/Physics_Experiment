@@ -15,7 +15,7 @@ def main():
     up = left = right = False
     bg = Surface((32,32))
     bg.convert()
-    bg.fill(Color("#000000"))
+    bg.fill(Color("#373830"))
     entities = pygame.sprite.Group()
     player = Player(32, 32)
     platforms = []
@@ -26,7 +26,7 @@ def main():
         "P                       P",
         "P                       P",
         "P                       P",
-        "P                       P",
+        "P                PPPP   P",
         "P                       P",
         "P                       P",
         "P                       P",
@@ -103,7 +103,7 @@ class Player(Entity):
         self.yvel = 0
         self.onGround = False
         self.image = Surface((32,32))
-        self.image.fill(Color("#ff0000"))
+        self.image.fill(Color("#ffffff"))
         self.image.convert()
         self.rect = Rect(x, y, 32, 32)
 
@@ -166,7 +166,7 @@ class Platform(Entity):
         Entity.__init__(self)
         self.image = Surface((32, 32))
         self.image.convert()
-        self.image.fill(Color("#FF9900"))
+        self.image.fill(Color("#faff02"))
         self.rect = Rect(x, y, 32, 32)
 
     def update(self):
